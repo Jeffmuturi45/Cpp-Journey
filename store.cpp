@@ -31,11 +31,17 @@ int main() {
     cout << "\nQuantity:\t" << quantity;
     cout << "\nTotal Cost:\t" << totalCost;
     
-    if (totalCost>=10000){
+    if (totalCost>=10000 && totalCost<20000){
     	discount = totalCost * 0.10;
     	finalAmount = totalCost - discount;
 		cout<<"\n You qualify for a 10% discount!! \n";
-		cout << "\n Final Amount: \t" << finalAmount;	
+		cout << "\n Final Amount: \t" << finalAmount;
+	}else if(totalCost>=20000){
+		discount = totalCost * 0.20;
+		finalAmount = totalCost - discount;
+		cout<<"\n You qualify for a 20% discount!";
+		cout << "\n Final Amount: \t" << finalAmount;
+		
 	}else{
 		finalAmount = totalCost;
 		cout <<"\n No discount available. \n";
